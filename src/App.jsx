@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { Outlet } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -32,11 +33,12 @@ const Footer = () => {
 }
 
 
+
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Outlet />
       <Footer />
     </>
   )
