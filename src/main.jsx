@@ -6,6 +6,7 @@ import HomePage from './Pages/HomePage/HomePage.jsx'
 import BookingPage from './Pages/BookingPage/BookingPage.jsx'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Params from './Pages/Params/Params.jsx'
+import About from './Pages/AboutPage/About.jsx'
 
 // const router = createBrowserRouter([
 //   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<App/>}>
       <Route path='' element={<HomePage />}/>
       <Route path='booking' element={<BookingPage />}/>
+      <Route path='about_us' element={<About />}/>
       <Route path='booking/:userid' element={<Params />}/>
     </Route>
   )

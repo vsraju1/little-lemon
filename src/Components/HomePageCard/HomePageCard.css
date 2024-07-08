@@ -1,0 +1,56 @@
+.homePageCard {
+    margin-top: 2rem;
+    width: 20rem;
+    min-height: fit-content;
+    /* background-color: cadetblue; */
+    background-color: rgb(231, 229, 229);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.4s ease;
+}
+
+.homePageCard .img{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+.homePageCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* border-radius: 5px; */
+}
+.homePageCard .textDescription{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.textDescription .textTop{
+    display: flex;
+    justify-content: space-between;
+}
+.textTop p{
+    font-size: 1.2rem !important;
+    font-weight: 600;
+}
+.textDescription h4{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.textDescription p{
+    font-size: 0.9rem;
+}
+
+/* Responsive for mobile devices  */
+@media(max-width: 600px){
+    .homePageCard{
+        width: 90%;
+        height: fit-content;
+    }
+}
