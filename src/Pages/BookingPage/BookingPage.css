@@ -52,3 +52,13 @@ form{
         opacity: 1;
     }
 }
+
+@media (max-width: 820px){
+    .dialogBox{
+        width: 95%;
+        padding: 2rem;
+    }
+    .dialogBox p{
+        font-size: 1.6rem;
+    }
+}

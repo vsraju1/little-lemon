@@ -3,16 +3,16 @@ import "./BookingForm.css";
 
 const BookingForm = ({
   availableTimes,
-  setAvailableTimes,
-  isBooked,
   setIsBooked,
   bookingInfo,
   setBookingInfo,
+  setBookingList,
 }) => {
+
+  // Loading in the button if it is true
   const [isLoading, setIsloading] = useState(false);
 
-  const [bookingList, setBookingList] = useState([])
-
+  // Changes when value changed in the booking info prop coming from BookingPage
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setBookingInfo((prevInfo) => ({
@@ -21,14 +21,14 @@ const BookingForm = ({
     }));
   };
 
+  // Handles data when submited and data will be added in the form of object
+  // Clears bookingInfo to default
   const handleBookingSubmit = (e) => {
     e.preventDefault();
+    setBookingList((prevList) => [...prevList, bookingInfo]);
     setIsloading(true);
     setTimeout(() => {
       setIsBooked(true);
-      setBookingList((prevList) => [...prevList, bookingInfo]);
-      console.log(bookingInfo)
-      console.log(bookingList)
       setBookingInfo({
         date: "",
         time: 0,

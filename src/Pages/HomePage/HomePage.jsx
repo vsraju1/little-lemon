@@ -29,6 +29,8 @@ const HomePage = () => {
     <>
       <div className="container">
         <div className="homepage">
+
+          {/* Little lemon banner  */}
           <div className="text">
             <h2>Little Lemon</h2>
             <h4>Chicago</h4>
@@ -37,18 +39,21 @@ const HomePage = () => {
             </p>
             <Link to="/booking" className="orderButton">Reserve Table</Link>
           </div>
+
+          {/* Little lemon banner image  */}
           <div className="img">
             <img src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=600" alt="little-lemon" />
           </div>
         </div>
+
+        {/* Chef's special text  */}
         <div className="homePageText">
           <h2>Chef's Special</h2>
           <button className="orderButton">Order now</button>
         </div>
+
+        {/* HomePage card  */}
         <div className="card">
-          {/* <HomePageCard />
-          <HomePageCard />
-          <HomePageCard /> */}
           {CardData.map((item, index) => (
             <HomePageCard key={index} imgUrl={item.imgUrl} itemTitle={item.itemTitle} itemPrice={item.itemPrice} itemDescription={item.itemDescription}/>
           ))}

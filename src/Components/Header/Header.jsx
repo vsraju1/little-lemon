@@ -14,14 +14,21 @@ const Header = () => {
     return (
       <>
       <header>
+
+        {/* Logo  */}
         <div className={`${isMenuOpen ? 'displayHidden' : 'logo'}`}>Little Lemon</div>
+
+        {/* Burger Menu  */}
         {!isMenuOpen && <i className="ri-menu-line" onClick={toggleMenu}></i>}
+
+        {/* Nav bar  */}
         <nav className={`${isMenuOpen ? 'mobileMenuActive' : ""}`}>
           <h1 className="closeMenu" onClick={toggleMenu}>X</h1>
           <ul>
             <li><Link to="/" onClick={linkToggleMenu}>Home</Link></li>
-            {/* <li><Link to="/about_us" onClick={linkToggleMenu}>Menu</Link></li> */}
+            <li><Link to="/" onClick={linkToggleMenu}>Menu</Link></li>
             <li ><Link to="/booking" className="orderButton" onClick={linkToggleMenu}>Book a table</Link></li>
+            <li><Link to="/" onClick={linkToggleMenu}>Contact Us</Link></li>
           </ul>
         </nav>
       </header>

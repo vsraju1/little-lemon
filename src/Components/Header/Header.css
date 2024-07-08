@@ -93,4 +93,8 @@ header .mobileMenuActive{
         height: 100vh;
         display: none;
     }
+    nav ul li a{
+        color: black;
+        font-size: 1.4rem;
+    }
 }
